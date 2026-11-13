@@ -162,7 +162,7 @@ if executar:
                 pista.deslocamento(t) * 100
                 for t in simulador.tempos
             ]
-fig1, ax1 = plt.subplots(figsize=(10, 4))
+            fig1, ax1 = plt.subplots(figsize=(10, 4))
 
             ax1.plot(
                 simulador.tempos,
@@ -238,7 +238,8 @@ fig1, ax1 = plt.subplots(figsize=(10, 4))
                     altura,
                     comprimento,
                     velocidade
-                ) resultados_amortecimento.append({
+                ) 
+                resultados_amortecimento.append({
                     "Amortecimento (Ns/m)": valor,
                     **metricas
                 })
@@ -310,7 +311,8 @@ fig1, ax1 = plt.subplots(figsize=(10, 4))
         except Exception as erro:
             st.error(f"Erro durante a simulação: {erro}")
 
-else:
+else:     
     st.info(
         "Altere os parâmetros na barra lateral e clique "
         "em 'Executar simulação' para visualizar os resultados."
+    )
